@@ -259,8 +259,8 @@ class Factorial {
         return this.cache.num
       }
 
-      let ans = num * (num-1);      
-      for (let i = num-2; i > 1 ; i--) {
+      let ans = num       
+      for (let i = num-1; i > 1 ; i--) {
         ans *= i
       }
       this.cache.num = ans
@@ -277,12 +277,14 @@ class Factorial {
 */
 
 function noCacheCalcFac(num) {
-    let ans = num * (num-1);      
-    for (let i = num-2; i > 1 ; i--) {
+    let ans = num       
+    for (let i = num-1; i >= 1 ; i--) {
       ans *= i
     }
     return ans
 }
+
+console.log(noCacheCalcFac(4))
 
 /*
   The logs below will show you how long these functions
